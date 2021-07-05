@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xappcede.Views.LoginView" BackgroundColor="#EBEBEB">
+
+    <ContentPage.Content>
+        <StackLayout >
+            <Label 
+                Text="Sign In"
+                Style="{StaticResource labelTittle}"
+                Margin="50"/>
+            <Frame Style="{StaticResource frame}">
+                <StackLayout Spacing="35">
+
+                    <Entry
+                        Text="{Binding Email}"
+                        Margin="0,20,0,0"
+                        Placeholder="Email"
+                        Keyboard="Email"
+                        Style="{StaticResource formEntry}"/>
+                    <Entry
+                        Text="{Binding Password}"
+                        Placeholder="Password"
+                        IsPassword="True"
+                        Style="{StaticResource formEntry}"/>
+                    <Button
+                        Text="login"
+                        Style="{StaticResource button}"
+                        Command="{Binding LoginCommand}"/>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
